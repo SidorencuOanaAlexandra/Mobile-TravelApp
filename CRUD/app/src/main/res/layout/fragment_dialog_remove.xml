@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DialogRemove">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="266dp"
+        android:layout_height="73dp"
+        android:gravity="center_horizontal"
+        android:text="Are you sure you want to delete this item?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.097" />
+
+    <Button
+        android:id="@+id/button_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:shadowColor="@color/black"
+        android:shadowDx="@dimen/material_emphasis_high_type"
+        android:text="YSE"
+        android:textColor="@color/light_blue"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="170dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:shadowColor="@color/black"
+        android:shadowDx="@dimen/material_emphasis_high_type"
+        android:text="NO"
+        android:textColor="@color/light_blue"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="170dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

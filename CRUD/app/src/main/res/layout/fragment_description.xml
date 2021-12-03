@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Description">
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="96dp"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/city_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="City"
+        app:layout_constraintStart_toStartOf="@+id/name_text"
+        app:layout_constraintTop_toBottomOf="@+id/name_text"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/lat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Lat"
+        app:layout_constraintStart_toStartOf="@+id/name_text"
+        app:layout_constraintTop_toBottomOf="@+id/city_text"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/long_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="Long"
+        app:layout_constraintStart_toStartOf="@+id/name_text"
+        app:layout_constraintTop_toBottomOf="@+id/lat_text"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/availability_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:text="Availability"
+        app:layout_constraintStart_toStartOf="@+id/name_text"
+        app:layout_constraintTop_toBottomOf="@+id/long_text"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/imgUrl_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="imgUrl"
+        app:layout_constraintStart_toStartOf="@+id/name_text"
+        app:layout_constraintTop_toBottomOf="@+id/availability_text"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Description"
+        app:layout_constraintStart_toStartOf="@+id/name_text"
+        app:layout_constraintTop_toBottomOf="@+id/imgUrl_text"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/name_edit"
+        android:layout_width="221dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="48dp"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/name_text"
+        app:layout_constraintStart_toEndOf="@+id/name_text" />
+
+    <EditText
+        android:id="@+id/city_edit"
+        android:layout_width="212dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="60dp"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/city_text"
+        app:layout_constraintStart_toEndOf="@+id/city_text" />
+
+    <EditText
+        android:id="@+id/lat_edit"
+        android:layout_width="209dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="68dp"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lat_text"
+        app:layout_constraintStart_toEndOf="@+id/lat_text" />
+
+    <EditText
+        android:id="@+id/long_edit"
+        android:layout_width="223dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="56dp"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/long_text"
+        app:layout_constraintStart_toEndOf="@+id/long_text" />
+
+    <EditText
+        android:id="@+id/availability_edit"
+        android:layout_width="218dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="20dp"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/availability_text"
+        app:layout_constraintStart_toEndOf="@+id/availability_text" />
+
+    <EditText
+        android:id="@+id/imgUrl_edit"
+        android:layout_width="235dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="44dp"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgUrl_text"
+        app:layout_constraintStart_toEndOf="@+id/imgUrl_text" />
+
+    <EditText
+        android:id="@+id/description_edit"
+        android:layout_width="230dp"
+        android:layout_height="232dp"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/description_text"
+        app:layout_constraintTop_toTopOf="@+id/description_text" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="188dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="644dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button"
+        android:shadowColor="@color/black"
+        android:shadowDx="@dimen/material_emphasis_high_type"
+        android:text="Update"
+        android:textColor="@color/light_blue"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="52dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="4dp"
+        android:background="@null"
+        android:src="@android:drawable/ic_menu_delete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

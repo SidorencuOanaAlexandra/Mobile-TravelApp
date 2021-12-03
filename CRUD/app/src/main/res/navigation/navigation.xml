@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/logIn">
+
+    <fragment
+        android:id="@+id/logIn"
+        android:name="com.example.crud.fragments.LogIn"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logIn_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.crud.HomePage"
+        android:label="home_page_fragment"
+        tools:layout="@layout/home_page_fragment" >
+        <action
+            android:id="@+id/action_homePage_to_logIn"
+            app:destination="@id/logIn" />
+        <action
+            android:id="@+id/action_homePage_to_description"
+            app:destination="@id/description" />
+        <action
+            android:id="@+id/action_homePage_to_add2"
+            app:destination="@id/add2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/description"
+        android:name="com.example.crud.fragments.Description"
+        android:label="fragment_description"
+        tools:layout="@layout/fragment_description" >
+
+        <action
+            android:id="@+id/action_description_to_homePage"
+            app:destination="@id/homePage" />
+        <argument
+            android:name="id_travelplace"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/add2"
+        android:name="com.example.crud.fragments.add"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_add2_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+</navigation>
