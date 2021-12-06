@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.crud.domain.TravelPlace
 import com.example.crud.repo.Repository
+import com.example.crud.repo.roomRepo.RoomDataBase
 import com.example.crud.viewmodel.HomePageViewModel
 import com.example.crud.viewmodel.MyViewModelFactory
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -46,14 +47,12 @@ class HomePage : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val repository = Repository();
         val myAdapter = MyAdapter(viewModel.getAllData())
         //factory = MyViewModelFactory(repository)
 //        viewModel = ViewModelProvider(this).get(HomePageViewModel::class.java)
         //viewModel = ViewModelProvider(this,factory).get(HomePageViewModel::class.java)
-        viewModel.travelPlaceList.observe(viewLifecycleOwner, Observer<List<TravelPlace>>(){
-            logd("onCreate: $it")
-            //myAdapter.update
+        viewModel.travelPlaceList.observe(viewLifecycleOwner, Observer<List<TravelPlace>>(){ places ->
+            myAdapter.notifyDataSetChanged();
         })
         recycleView.adapter = myAdapter
     }

@@ -31,7 +31,6 @@ class MyAdapter(private val values: List<TravelPlace>): RecyclerView.Adapter<MyA
 
         val currentItem = values[position]
         holder.title.text = currentItem.name
-        //Glide.with(holder.itemView.context).load(currentItem.imgUrl).into(holder.binding.imageview)
 
         with(holder.itemView) {
             tag = currentItem.id
@@ -42,10 +41,16 @@ class MyAdapter(private val values: List<TravelPlace>): RecyclerView.Adapter<MyA
 
     private val onClickListener: View.OnClickListener = View.OnClickListener { v ->
         val item = v.tag.toString()
+        logd("onCreate: $item")
 
         var bundle = bundleOf("id_travelplace" to item)
         Navigation.findNavController(v).navigate(R.id.description,bundle);
     }
+
+//    internal fun setWords(words: List<Word>) {
+//        this.words = words
+//        notifyDataSetChanged()
+//    }
 
 
     override fun getItemCount(): Int {

@@ -49,7 +49,7 @@ class add : Fragment() {
 
         myview.findViewById<TextView>(R.id.button).setOnClickListener{
 
-            var new_travelPlace = TravelPlace("",name_field.text.toString(),city_field.text.toString(),lat_field.text.toString(),long_field.text.toString(),description_field.text.toString(),availability_field.text.toString(),img_field.text.toString())
+            var new_travelPlace = TravelPlace(0,name_field.text.toString(),city_field.text.toString(),lat_field.text.toString(),long_field.text.toString(),description_field.text.toString(),availability_field.text.toString(),img_field.text.toString())
             Add(new_travelPlace)
         }
 

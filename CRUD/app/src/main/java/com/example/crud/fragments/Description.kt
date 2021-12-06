@@ -39,13 +39,15 @@ import com.google.android.material.dialog.MaterialDialogs
  */
 class Description : Fragment() {
     // TODO: Rename and change types of parameters
-    private var id: String? = null
+    private var id: Int? = null
+    private var ceva: String? = null
     private val viewModel: HomePageViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            id = it.getString("id_travelplace")
+            ceva = it.getString("id_travelplace")
+            id = Integer.parseInt(ceva)
             logd("onCreate: $id")
             //param2 = it.getString(ARG_PARAM2)
         }
@@ -124,7 +126,7 @@ class Description : Fragment() {
     }
 
     fun delete(){
-        viewModel.Remove(id.toString())
+        id?.let { viewModel.Remove(it) }
     }
 
 
